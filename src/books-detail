@@ -1,0 +1,50 @@
+   <div className="book-details">
+                    <div>Autor: {author}</div>
+                    <div>Gatunek: {genre}</div>
+                    <div>Data powstania: {release_date}</div>
+                    <div>Opis: {description}</div>
+
+
+                    <Card style={{ width: '18rem' }} className="book">
+                                        <Card.Body>
+                                            <Card.Title className="book-title">{props.title}</Card.Title>
+                                            <button onClick={onDelete}>Delete</button>
+                                            <button onClick={showDescription}>Show szczegóły</button>
+                                        </Card.Body>
+                                    </Card>
+
+
+
+
+<Card style={{ width: '18rem' }} className="book">
+                    <Card.Body>
+                        <Card.Title className="book-title">{props.title}</Card.Title>
+                        <div className="book-details">
+                            <div>Autor: {props.author}</div>
+                            <div>Gatunek: {props.genre}</div>
+                            <div>Data powstania: {props.release_date}</div>
+                            <div>Opis: {props.description}</div>
+                        </div>
+                    </Card.Body>
+                </Card>
+   description: props.book ? props.book.description: ''
+
+
+    <input type="checkbox" onClick={sortByTitle} name="sortTitle"/>
+                   <label for="sortTitle">Sort by title</label>
+                   <input type="checkbox" onClick={sortByDate} name="sortDate"/>
+                   <label for="sortDate">Sort by date</label>
+
+
+                   setShouldSortByTitle(!shouldSortByTitle)
+                           if(shouldSortByTitle) {
+
+                               setBooks(_.sortBy(books, ['title']))
+                           }
+                           else {
+
+                               setBooks(_.sortBy(books, ['id']))
+                           }
+                       }
+
+

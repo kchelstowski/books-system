@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.books-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+header {
+  .header-text {
+    display: flex;
+    justify-content: center;
+    h1 {
+      display: flex;
+      padding-left: 10px;
+      align-items: center;
+    }
+  }
+  width: 100%;
+  .links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #f3dd84;
+    box-sizing: border-box;
+
+
+    .link {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #554d4d;
+
+      margin: 30px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      transition: color .5s linear;
+      &:hover {
+        font-weight: 800;
+        color: #f1854a;
+        border-bottom: 1px solid #f5f19c;
+      }
+      .book-icon-text {
+        margin-left: 5px;
+      }
+    }
+  } //links
+  .header-text {
+    padding: 30px;
+    h1 {
+      text-align: center;
+    }
+  }
+
+} //header
+
+.main-content {
+  width: 100%;
+  .books-list {
+    width: 100%;
+    background-color: #f6f5f5;
+    border: 2px solid orange;
+    box-sizing: border-box;
+    padding: 25px;
+
+
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+    }
+    .sortCheckboxes {
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      padding: 20px;
+      border-top: 1px solid black;
+
+      .sortInfo {
+        padding: 10px;
+        width: 30%;
+        text-align: center;
+        font-size: 20px;
+      }
+      .sortInputs {
+        width: 70%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+
+        label {
+          padding-left: 5px;
+          font-size: 20px;
+        }
+      }
+
+    }
+
+  }
+}
+.inputAndLabel {
+  width: calc(100%/3);
+}
+.book {
+  width: 18rem;
+  margin-bottom: 10px;
+  .book-image-size {
+    width: 100%;
+    height: 300px;
+  }
+
+  .book-author {
+    font-weight: bold;
+  }
+
+}
+.bookButtons {
+
+}
+
+.form {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  .errorMsg {
+    color: red;
+  }
+}
+
+@media (max-width: 387px) {
+  .main-content {
+    .books-list{
+      .sortCheckboxes {
+        padding: 0px;
+        .sortInfo {
+          font-size: 14px;
+        }
+        .sortInputs {
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 290px) {
+  .book {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    .links {
+      .link {
+        font-size: 16px;
+      }
+    }
+  }
+  .main-content {
+    .books-list{
+      .sortCheckboxes {
+        padding: 0px;
+        .sortInfo {
+          font-size: 14px;
+        }
+        .sortInputs {
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .header-photo {
+    display: none;
+  }
+}
+@media (max-width: 387px) {
+  header {
+    .links {
+      .link {
+        font-size: 14px;
+      }
+    }
+  }
+  .main-content {
+    .books-list {
+      h3 {
+        font-size: 21px;
+      }
+    }
+    .sortCheckboxes {
+      .sortInfo {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (max-width: 355px) {
+  header {
+    .links {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .link {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 276px) {
+  header {
+    .header-text {
+      display: none;
+    }
+  }
+  .main-content {
+    .sortCheckboxes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .sortInputs {
+        display: flex;
+        flex-direction: column;
+        .inputAndLabel {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+}
+
+.delete {
+  width: 200px;
+  border: 1px solid black;
+  height: 200px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
